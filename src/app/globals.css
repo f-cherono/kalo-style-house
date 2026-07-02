@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f2ded7;
+  --foreground: #2b2624;
+  --accent: #b8836b;
+  --gold: #c9a227;
+  --muted: #ecd9d0;
+  --border: #ddc3b8;
+  --on-photo: #f7ede7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-gold: var(--gold);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-black: var(--foreground);
+  --color-on-photo: var(--on-photo);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-anton);
+}
+
+body {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 12% 18%, rgba(255, 255, 255, 0.65), transparent 60%),
+    radial-gradient(ellipse 60% 45% at 88% 12%, rgba(255, 255, 255, 0.45), transparent 55%),
+    radial-gradient(ellipse 70% 60% at 78% 88%, rgba(226, 184, 172, 0.6), transparent 60%),
+    radial-gradient(ellipse 55% 40% at 8% 92%, rgba(255, 255, 255, 0.45), transparent 55%),
+    radial-gradient(ellipse 45% 35% at 50% 50%, rgba(255, 255, 255, 0.3), transparent 60%),
+    radial-gradient(ellipse 35% 25% at 30% 65%, rgba(201, 162, 39, 0.1), transparent 65%),
+    radial-gradient(ellipse 30% 22% at 92% 55%, rgba(201, 162, 39, 0.1), transparent 65%),
+    repeating-linear-gradient(
+      118deg,
+      rgba(184, 131, 107, 0.16) 0px,
+      rgba(184, 131, 107, 0.16) 1px,
+      transparent 2px,
+      transparent 90px
+    ),
+    repeating-linear-gradient(
+      28deg,
+      rgba(184, 131, 107, 0.1) 0px,
+      rgba(184, 131, 107, 0.1) 1px,
+      transparent 2px,
+      transparent 130px
+    ),
+    repeating-linear-gradient(
+      160deg,
+      rgba(201, 162, 39, 0.14) 0px,
+      rgba(201, 162, 39, 0.14) 1px,
+      transparent 2px,
+      transparent 150px
+    ),
+    repeating-linear-gradient(
+      72deg,
+      rgba(201, 162, 39, 0.09) 0px,
+      rgba(201, 162, 39, 0.09) 1px,
+      transparent 2px,
+      transparent 170px
+    );
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+.font-display {
+  font-family: var(--font-anton), Impact, sans-serif;
+  letter-spacing: 0.01em;
+}
